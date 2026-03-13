@@ -1,0 +1,120 @@
+/* Styles migrated to Tailwind — this file is no longer imported */
+.footer-container {
+  background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+  padding: 3rem 2rem 1.5rem;
+  color: white;
+  margin-top: auto;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  border-top: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: auto;
+  gap: 3rem;
+}
+
+.footer-left,
+.footer-links,
+.footer-contact {
+  flex: 1 1 300px;
+}
+
+.footer-left h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #3b82f6, #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.footer-left p {
+  color: #D1D5DB;
+  line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #F3F4F6;
+  font-weight: 600;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 0.75rem 0;
+}
+
+.footer-links ul li a {
+  color: #D1D5DB;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.footer-links ul li a::before {
+  content: '→';
+  position: absolute;
+  left: -20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #93c5fd;
+  transform: translateX(5px);
+}
+
+.footer-links ul li a:hover::before {
+  opacity: 1;
+  left: -15px;
+}
+
+.footer-contact a {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #93c5fd;
+}
+
+.footer-contact p {
+  color: #D1D5DB;
+  margin: 0.5rem 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #9CA3AF;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-links,
+  .footer-contact {
+    max-width: 100%;
+  }
+}

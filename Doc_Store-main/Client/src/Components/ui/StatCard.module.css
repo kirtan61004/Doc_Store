@@ -1,0 +1,38 @@
+.card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem 1.75rem;
+  border-left: 4px solid transparent;
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: default;
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+.top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+
+.title { font-size: var(--text-sm); color: var(--gray-500); font-weight: var(--font-medium); margin: 0 0 0.35rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.value { font-size: var(--text-3xl); font-weight: var(--font-extrabold); color: var(--gray-900); margin: 0; line-height: 1; }
+.trend { font-size: var(--text-xs); color: var(--success); margin: 0.35rem 0 0; font-weight: var(--font-medium); }
+
+.iconBox {
+  width: 52px; height: 52px; border-radius: var(--radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; flex-shrink: 0;
+}
+
+/* ── Color themes ── */
+.blue  { border-left-color: var(--primary-500); }
+.blue  .iconBox { background: var(--primary-100); color: var(--primary-600); }
+
+.green { border-left-color: var(--success); }
+.green .iconBox { background: var(--success-light); color: var(--success); }
+
+.yellow { border-left-color: var(--warning); }
+.yellow .iconBox { background: var(--warning-light); color: var(--warning); }
+
+.red  { border-left-color: var(--danger); }
+.red  .iconBox { background: var(--danger-light); color: var(--danger); }
+
+.purple { border-left-color: #8b5cf6; }
+.purple .iconBox { background: #ede9fe; color: #7c3aed; }

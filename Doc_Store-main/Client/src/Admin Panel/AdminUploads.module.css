@@ -1,0 +1,161 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .container { grid-template-columns: 1fr; }
+}
+
+.uploadCard h2 { margin-bottom: 0; }
+
+.heading {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin: 0 0 4px;
+}
+
+.sub {
+  color: var(--gray-500);
+  font-size: var(--text-sm);
+  margin: 0 0 1.5rem;
+}
+
+.successBanner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  color: #166534;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  margin-bottom: 1rem;
+}
+
+/* Drop zone */
+.dropZone {
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  background: var(--gray-50);
+  margin-bottom: 1rem;
+}
+
+.dropZone:hover, .dragging {
+  border-color: var(--primary-500);
+  background: #eff6ff;
+}
+
+.hasFile {
+  border-color: var(--primary-500);
+  background: #eff6ff;
+}
+
+.dropIcon {
+  font-size: 3rem;
+  color: var(--gray-400);
+  margin-bottom: 0.75rem;
+}
+
+.dragging .dropIcon, .dropZone:hover .dropIcon {
+  color: var(--primary-500);
+}
+
+.dropText {
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--gray-600);
+  margin: 0;
+}
+
+/* Selected file */
+.filePreview {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.filePreviewIcon {
+  font-size: 1.75rem;
+  color: var(--primary-500);
+  flex-shrink: 0;
+}
+
+.fileInfo { flex: 1; min-width: 0; }
+
+.fileName {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--gray-800);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fileSize {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  margin: 2px 0 0;
+}
+
+.removeBtn {
+  background: var(--gray-200);
+  border: none;
+  color: var(--gray-600);
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--transition);
+}
+
+.removeBtn:hover { background: #fee2e2; color: var(--danger); }
+
+.error {
+  color: var(--danger);
+  font-size: var(--text-sm);
+  margin: 0 0 0.75rem;
+}
+
+.uploadBtn { width: 100%; margin-top: 0.5rem; }
+
+/* Info card */
+.infoTitle {
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: var(--gray-800);
+  margin: 0 0 1rem;
+}
+
+.infoList {
+  padding-left: 1.25rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.infoList li {
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.5;
+}

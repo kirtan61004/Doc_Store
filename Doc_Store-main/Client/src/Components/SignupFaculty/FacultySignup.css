@@ -1,0 +1,123 @@
+/* Container for full page */
+#faculty-signup-container {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#faculty-signup-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.3) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Card holding the form */
+#faculty-signup-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 3rem 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Card title */
+#faculty-signup-card h2 {
+  margin-bottom: 2rem;
+  font-size: 2.25rem;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+/* Form inputs */
+#faculty-signup-card form input[type="text"],
+#faculty-signup-card form input[type="email"],
+#faculty-signup-card form input[type="password"],
+#faculty-signup-card form input[type="file"] {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 2px solid #E5E7EB;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  color: #1F2937;
+}
+
+#faculty-signup-card form input[type="text"]:focus,
+#faculty-signup-card form input[type="email"]:focus,
+#faculty-signup-card form input[type="password"]:focus,
+#faculty-signup-card form input[type="file"]:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+/* File input custom style */
+#faculty-signup-card form input[type="file"] {
+  padding: 6px;
+}
+
+/* Submit button */
+#faculty-signup-card form button {
+  width: 100%;
+  background-color: #10b981;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#faculty-signup-card form button:hover {
+  background-color: #0f766e;
+}
+
+/* Toastify adjustments */
+.Toastify__toast-container {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animation for card */
+@keyframes fadeIn {
+  0% { transform: translateY(-30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  #faculty-signup-card {
+    padding: 30px 20px;
+  }
+
+  #faculty-signup-card h2 {
+    font-size: 24px;
+  }
+
+  #faculty-signup-card form button {
+    font-size: 16px;
+  }
+}

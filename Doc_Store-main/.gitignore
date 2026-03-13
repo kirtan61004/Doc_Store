@@ -1,0 +1,29 @@
+# ===== Node / npm =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===== Environment secrets =====
+.env
+.env.local
+.env.*.local
+
+# ===== Uploaded files (store in cloud, not git) =====
+Server/uploads/*
+!Server/uploads/.gitkeep
+
+# ===== Build output =====
+Client/dist/
+Client/build/
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+
+# ===== Editor =====
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
